@@ -1,35 +1,25 @@
 # Data Exploration Projects
 
-This repository contains EDA (Exploratory Data Analysis) projects using real-world datasets.
+Exploratory data analysis (EDA) notebooks on public datasets, plus SQL exploration of COVID-19 data.
 
-Each notebook includes step-by-step data cleaning, visualization, and insights extraction using Python tools.
+## Contents
 
-## Notebooks
+| File | Dataset | What it explores |
+|---|---|---|
+| `911.ipynb` | Emergency (911) calls | Call reasons (EMS, Traffic, Fire) by day of week, month and hour; busiest townships |
+| `covid19.ipynb` | COVID-19 by country | Cases and deaths by WHO region, countries with most active cases, correlation of deaths with other measures |
+| `loan_data.ipynb` | Lending Club loans | Loan purposes, FICO score and interest rate by credit policy, which loans are not fully paid |
+| `sql/covid_project.sql` | COVID deaths and vaccinations (`sql/*.xlsx`) | Death rate, infection rate vs population, highest counts by country and continent, vaccinations |
 
-| Notebook | Description |
-|----------|-------------|
-| `covid19_analysis.ipynb` | Analysis of COVID-19 global spread: cases, deaths, trends. |
-| `loan_data_analysis.ipynb` | Exploring loan default patterns across customer demographics. |
-| `Netflix_data_analysis.ipynb` | Visual breakdown of Netflix content by genre, release date, country, etc. |
+## Tools
 
-## Tools Used
+Python · pandas · NumPy · Matplotlib · Seaborn · SQL Server (T-SQL)
 
-- Python
-- Pandas / NumPy
-- Seaborn / Matplotlib
-- Jupyter Notebook
+## How to run
 
-## Skills Demonstrated
-
-- Data Cleaning
-- EDA Techniques
-- Correlation Analysis
-- Trend Visualization
-- Histograms, Boxplots, Heatmaps, etc.
-
-## How to Run
-
-Clone the repo and open any `.ipynb` in Jupyter or VS Code:
+The notebooks were written in Google Colab and read their CSV files from `/content/`. To run them locally, download the dataset, place the CSV next to the notebook, and change the path in the `pd.read_csv(...)` cell.
 
 ```bash
-git clone https://github.com/AliAbaza1/Data-exploration.git
+pip install pandas numpy matplotlib seaborn jupyter
+jupyter notebook
+```
